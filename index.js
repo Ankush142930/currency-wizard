@@ -4,6 +4,7 @@ const freecurrencyapi = new Freecurrencyapi(
   'fca_live_BVjT34E5WAXcbf5FcV0Kp63cGdy7Bfi0GjeKKxhg'
 );
 
+//Convert x amounts of sourceCurrency to targetCurrency
 export const currencyMagic = async (sourceCurrency, targetCurrency, amount) => {
   try {
     const response = await freecurrencyapi.latest({
