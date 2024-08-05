@@ -5,7 +5,7 @@ const freecurrencyapi = new Freecurrencyapi(
 );
 
 //Convert x amounts of sourceCurrency to targetCurrency
-export const currencyMagic = async (sourceCurrency, targetCurrency, amount) => {
+const currencyMagic = async (sourceCurrency, targetCurrency, amount) => {
   try {
     const response = await freecurrencyapi.latest({
       base_currency: sourceCurrency,
@@ -19,3 +19,5 @@ export const currencyMagic = async (sourceCurrency, targetCurrency, amount) => {
     console.log(error.message);
   }
 };
+
+export default currencyMagic;
